@@ -14,7 +14,7 @@ function setFavoriteFood() {
       para.textContent = 'Natto is one of the 7 healthy sins.';
       break;
     case 'cheese':
-      para.textContent = 'Cheese is stinky like Brittany\'s feet. what';
+      para.textContent = 'Cheese is usually good, sometimes nasty';
       break;
     case 'chocolate':
       para.textContent = 'With coffee, yum.';   
