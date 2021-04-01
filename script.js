@@ -1,25 +1,12 @@
-const select = document.querySelector('select');
-const para = document.querySelector('p');
+const doc = document;
+const menuOpen = doc.querySelector(".menu");
+const menuClose = doc.querySelector(".close");
+const overlay = doc.querySelector(".overlay");
 
-select.addEventListener('change', setFavoriteFood);
+menuOpen.addEventListener("click", () => {
+  overlay.classList.add("overlay--active");
+});
 
-function setFavoriteFood() {
-  const choice = select.value;
-
-  switch (choice) {
-    case 'pickles':
-      para.textContent = 'Pickles are made from drowned cucumbers. You monster.';
-      break;
-    case 'natto':
-      para.textContent = 'Natto is one of the 7 healthy sins.';
-      break;
-    case 'cheese':
-      para.textContent = 'Cheese is usually good, sometimes nasty';
-      break;
-    case 'chocolate':
-      para.textContent = 'With coffee, yum.';   
-      break;
-      default:
-        para.textContent = ''; 
-  }
-}
+menuClose.addEventListener("click", () => {
+  overlay.classList.remove("overlay--active");
+});
